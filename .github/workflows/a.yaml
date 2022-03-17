@@ -18,3 +18,12 @@ jobs:
           print
           (platform.processor())
         shell: python
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: show directory
+        run: Get-Location
+      - name: show directory in bash
+        run: pwd
+        shell: bash
+
