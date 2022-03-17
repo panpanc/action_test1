@@ -13,3 +13,8 @@ jobs:
           who-to-greet: michael
       - name: log output time
         run: echo "${{steps.greet.outputs.time}}"
+      - name: show envs
+        run: |
+          echo $GITHUB_SHA  
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
